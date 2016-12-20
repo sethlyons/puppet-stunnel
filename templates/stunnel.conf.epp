@@ -1,0 +1,74 @@
+### MANAGED BY PUPPET
+### DO NOT EDIT
+
+; directory to include for config snippets
+include = <%= $stunnel::config_dir %>
+
+; SSL versioned supported
+<% $stunnel::sslversion.each |$ssl| { -%>
+sslVersion = <%= $ssl %>
+<% } -%>
+
+<% if $stunnel::logfile { -%>
+; set a custom log file
+output = <%= $stunnel::logfile -%>
+<% } -%>
+
+<% if $stunnel::egd { -%>
+egd = <%= $stunnel::egd %>
+<% } -%>
+<% if $stunnel::engine { -%>
+engine = <%= $stunnel::engine %>
+<% if $stunnel::enginectrl { -%>
+engineCtrl = <%= $stunnel::enginectrl %>
+<% } -%>
+<% if $stunnel::enginedefault { -%>
+engineDefault = <%= $stunnel::enginedefault %>
+<% } -%>
+<% } -%>
+<% if $stunnel::fips { -%>
+fips = yes
+<% } -%>
+<% if $stunnel::foreground { -%>
+<% if $stunnel::foreground == "quiet" { -%>
+foreground = quiet
+<% } else { -%>
+foreground = yes
+<% } -%>
+<% } -%>
+<% if $stunnel::iconactive { -%>
+iconActive = <%= $stunnel::iconactive %>
+<% } -%>
+<% if $stunnel::iconerror { -%>
+iconError = <%= $stunnel::iconerror %>
+<% } -%>
+<% if $stunnel::iconidle { -%>
+iconIdle = <%= $stunnel::iconidle %>
+<% } -%>
+<% if $stunnel::log { -%>
+log = <%= $stunnel::log %>
+<% } -%>
+<% if $stunnel::output { -%>
+output = <%= $stunnel::output %>
+<% } -%>
+<% if $stunnel::pid { -%>
+pid = <%= $stunnel::pidfile %>
+<% } -%>
+<% if $stunnel::rndbytes { -%>
+RNDbytes = <%= $stunnel::rndbytes %>
+<% } -%>
+<% if $stunnel::rndfile { -%>
+RNDfile = <%= $stunnel::rndfile %>
+<% } -%>
+<% if $stunnel::rndoverwrite { -%>
+RNDoverwrite = <%= $stunnel::rndoverwrite %>
+<% } -%>
+<% if $stunnel::socket { -%>
+socket = <%= $stunnel::socket %>
+<% } -%>
+<% if !$stunnel::syslog { -%>
+syslog = no
+<% } -%>
+<% if !$stunnel::taskbar { -%>
+taskbar = no
+<% } -%>

@@ -1,0 +1,24 @@
+---
+stunnel::chroot: ~
+stunnel::compression: ~
+stunnel::debug: ~
+stunnel::egd: ~
+stunnel::engine: ~
+stunnel::enginectrl: ~
+stunnel::enginedefault: ~
+stunnel::fips: ~
+stunnel::foreground: ~
+stunnel::iconactive: ~
+stunnel::iconerror: ~
+stunnel::iconidle: ~
+stunnel::log: ~
+stunnel::output: ~
+stunnel::pid: ~
+stunnel::rndbytes: ~
+stunnel::rndfile: ~
+stunnel::rndoverwrite: ~
+stunnel::socket: ~
+stunnel::sslversion:
+  - "TLSv1.2"
+stunnel::syslog: ~
+stunnel::taskbar: ~

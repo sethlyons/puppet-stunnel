@@ -1,0 +1,190 @@
+### MANAGED BY PUPPET
+### DO NOT EDIT
+
+[<%= $title %>]
+<% if $accept { -%>
+accept = <%= $accept %>
+<% } -%>
+<% if $connect { -%>
+<% $connect.each |$c| { -%>
+connect = <%= $c %>
+<% } -%>
+<% } -%>
+<% if $capath { -%>
+CApath = <%= $capath %>
+<% } -%>
+<% if $cafile { -%>
+CAfile = <%= $cafile %>
+<% } -%>
+<% if $cert { -%>
+cert = <%= $cert %>
+<% } -%>
+<% if $checkemail { -%>
+checkEmail = <%= $checkemail %>
+<% } -%>
+<% if $checkhost { -%>
+checkHost = <%= $checkhost %>
+<% } -%>
+<% if $checkip { -%>
+checkIP = <%= $checkip %>
+<% } -%>
+<% if $ciphers { -%>
+ciphers = <%= $ciphers.join(":") %>
+<% } -%>
+<% if $client { -%>
+client = yes
+<% } else { -%>
+client = no
+<% } -%>
+<% if $config { -%>
+config = <%= $config %>
+<% } -%>
+<% if $crlpath { -%>
+CRLpath = <%= $crlpath %>
+<% } -%>
+<% if $crlfile { -%>
+CRLfile = <%= $crlfile %>
+<% } -%>
+<% if $curve { -%>
+curve = <%= $curve %>
+<% } -%>
+<% if $logid { -%>
+logID = <%= $logid %>
+<% } -%>
+<% if $debug { -%>
+debug = <%= $debug %>
+<% } -%>
+<% if $delay { -%>
+delay = yes
+<% } -%>
+<% if $engineid { -%>
+engineID = <%= $engineid %>
+<% } -%>
+<% if $enginenum { -%>
+engineNum = <%= $enginenum %>
+<% } -%>
+<% if $exec { -%>
+exec = <%= $exec %>
+<% } -%>
+<% if $execargs { -%>
+execArgs = <%= $execargs %>
+<% } -%>
+<% if $failover { -%>
+failover = <%= $failover %>
+<% } -%>
+<% if $ident { -%>
+ident = <%= $ident %>
+<% } -%>
+<% if $key { -%>
+key = <%= $key %>
+<% } -%>
+<% if $libwrap { -%>
+libwrap = yes
+<% } -%>
+<% if $local { -%>
+local = <%= $local %>
+<% } -%>
+<% if $ocsp { -%>
+OSCP = <%= $oscp %>
+<% if $ocspaia { -%>
+OSCPaia = yes
+<% } else { -%>
+OSCPaia = no
+<% } -%>
+<% if $ocspflag { -%>
+OSCPflag = <%= $oscpflag %>
+<% } -%>
+<% if $ocspnonce { -%>
+OSCPnonce = yes
+<% } else { -%>
+OSCPnonce = no
+<% } -%>
+<% } -%>
+<% if $options { -%>
+<% $options.each |$option| { -%>
+option = <%= $option %>
+<% } -%>
+<% } -%>
+<% if $protocol { -%>
+protocol = <%= $protocol %>
+<% if $protocolauthentication { -%>
+protocolAuthentication = <%= $protocolauthentication %>
+<% } -%>
+<% if $protocoldomain { -%>
+protocolDomain = <%= $protocoldomain %>
+<% } -%>
+<% if $protocolhost { -%>
+protocolHost = <%= $protocolhost %>
+<% } -%>
+<% if $protocolpassword { -%>
+protocolPassword = <%= $protocolpassword %>
+<% } -%>
+<% if $protocolusername { -%>
+procotolUsername = <%= $protocolusername %>
+<% } -%>
+<% } -%>
+<% if $pskidentity { -%>
+PSKidentity = <%= $pskidentity %>
+<% if $psksecrets { -%>
+PSKsecrets = <%= $psksecrets %>
+<% } -%>
+<% } -%>
+<% if $pty { -%>
+pty = yes
+<% } -%>
+<% if $redirect { -%>
+redirect = <%= $redirect %>
+<% } -%>
+<% if ! $renegotiation { -%>
+renegotiation = no
+<% } -%>
+<% if ! $reset { -%>
+reset = no
+<% } -%>
+<% if $retry { -%>
+retry = yes
+<% } -%>
+<% if $requirecert { -%>
+requireCert = yes
+<% } -%>
+<% if $setgid { -%>
+setgid = <%= $setgid %>
+<% } -%>
+<% if $setuid { -%>
+setuid = <%= $setuid %>
+<% } -%>
+<% if $sessioncachesize { -%>
+sessionCacheSize = <%= $sessioncachesize %>
+<% } -%>
+<% if $sessioncachetimeout { -%>
+sessionCacheTimeout = <%= $sessioncachetimeout %>
+<% } -%>
+<% if $sessiond { -%>
+sessiond = <%= $sessiond %>
+<% } -%>
+<% if $sni { -%>
+sni = <%= $sni %>
+<% } -%>
+<% if $sslversion { -%>
+<% $sslversion.each |$ssl| { -%>
+sslVersion = <%= $ssl %>
+<% } -%>
+<% } -%>
+<% if $stack { -%>
+stack = <%= $stack %>
+<% } -%>
+<% if $timeoutbusy { -%>
+TIMEOUTbusy = <%= $timeoutbusy %>
+<% } -%>
+<% if $timeoutclose { -%>
+TIMEOUTclose = <%= $timeoutbusy %>
+<% } -%>
+<% if $timeoutconnect { -%>
+TIMEOUTconnect = <%= $timeoutbusy %>
+<% } -%>
+<% if $timeoutidle { -%>
+TIMEOUTidle = <%= $timeoutbusy %>
+<% } -%>
+<% if $transparent { -%>
+transparent = <%= $transparent %>
+<% } -%>

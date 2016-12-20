@@ -1,0 +1,9 @@
+stunnel::config_dir: "/usr/local/etc/stunnel/Includes"
+stunnel::config_file: "/usr/local/etc/stunnel/stunnel.conf"
+stunnel::group: wheel
+stunnel::logfile: ~
+stunnel::owner: root
+stunnel::package_name: stunnel
+stunnel::pidfile: "/var/run/stunnel.pid"
+stunnel::service_name: stunnel
+stunnel::version: installed
