@@ -1,0 +1,13 @@
+stunnel::chroot: "/var/run/stunnel"
+stunnel::config_dir: "/etc/stunnel/Includes"
+stunnel::config_file: "/etc/stunnel/stunnel.conf"
+stunnel::group: root
+stunnel::logfile: ~
+stunnel::owner: root
+stunnel::package_name: stunnel
+stunnel::pidfile: "/stunnel.pid"
+stunnel::service_name: stunnel
+stunnel::socket:
+  - l:TCP_NODELAY=1
+  - r:TCP_NODELAY=1
+stunnel::version: installed

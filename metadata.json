@@ -1,0 +1,28 @@
+{
+   "name": "fxcm-stunnel",
+   "version": "0.1",
+   "author": "jewjitsu",
+   "summary": "Installs, configures, and manages the stunnel service.",
+   "license": "BSD-3-Clause-Clear",
+   "source": "https://github.com/fxcm/fxcm-stunnel",
+   "project_page": "https://github.com/fxcm/fxcm-stunnel",
+   "dependencies": [],
+   "data_provider": "hiera",
+   "operatingsystem_support": [
+      {
+         "operatingsystem": "FreeBSD",
+         "operatingsystemrelease": ["10", "11"]
+      },
+      {
+         "operatingsystem": "RedHat",
+         "operatingsystemrelease": ["6", "7"]
+      }
+   ],
+   "requirements": [
+      {
+         "name": "puppet",
+         "version_requirements": ">= 4.5.0 < 5.0.0"
+      }
+   ],
+   "description": "stunnel module for FreeBSD and RedHat."
+}
